@@ -1,0 +1,18 @@
+The following CSS rule unintentionally targets more elements than expected due to the lack of specificity:
+
+```css
+.container p { color: blue; }
+```
+
+If another element, say a `<div>` inside `.container` also contains a `<p>` element it will be affected.
+
+For example:
+
+```html
+<div class="container">
+  <p>This paragraph will be blue.</p>
+  <div>
+    <p>This paragraph will *also* be blue, unexpectedly.</p>
+  </div>
+</div>
+```
