@@ -1,0 +1,15 @@
+To fix this, use a more specific selector to target only the intended `<p>` elements.  For instance:
+
+```css
+.container > p { color: blue; }
+```
+
+The `>` child selector ensures that only direct children `<p>` of `.container` are affected.  Alternatively, for more complex scenarios, consider using more specific selectors or class names for finer-grained control.
+
+Another solution:
+
+```css
+.container p.main-paragraph { color: blue; }
+```
+
+Adding a class `main-paragraph` to the intended paragraph elements provides another level of specificity.
